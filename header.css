@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background-color: rgb(81, 81, 81);
+    background-color: #24262b;
     color: #fff;
     
    }
@@ -22,7 +22,7 @@
    }
    /* LOGO */
    .logo img{
-    max-width: 60px;
+    max-width: 80px;
    }
    /* NAVBAR MENU */
    .menu {
