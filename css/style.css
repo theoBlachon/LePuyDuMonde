@@ -15,14 +15,14 @@
   padding: 20px;
   background-color: rgb(81, 81, 81);
   color: #fff;
-  
+
  }
  .navbar a {
   color: #fff;
  }
  /* LOGO */
  .logo img{
-  max-width: 100px;
+  max-width: 60px;
  }
  /* NAVBAR MENU */
  .menu {
@@ -168,7 +168,7 @@
 .flex-japon {
     display: flex;
     justify-content: space-around;
-    background-color: black ;
+    background-color: rgb(255, 255, 255) ;
     width: 100%;
     margin: auto; 
     padding-bottom: 300px;
@@ -177,7 +177,7 @@
   .flex-mexique {
     display: flex;
     justify-content: space-around;
-    background-color: black ;
+    background-color: rgb(255, 255, 255) ;
     width: 100%;
     margin: auto; 
     padding-bottom: 300px;
@@ -186,7 +186,7 @@
   .flex-inde {
     display: flex;
     justify-content: space-around;
-    background-color: black ;
+    background-color: rgb(255, 255, 255) ;
     width: 100%;
     margin: auto; 
     padding-bottom: 300px;
@@ -195,7 +195,7 @@
   .flex-egypte {
     display: flex;
     justify-content: space-around;
-    background-color: black ;
+    background-color: rgb(255, 255, 255) ;
     width: 100%;
     margin: auto; 
     padding-bottom: 300px;
