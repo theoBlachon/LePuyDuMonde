@@ -74,7 +74,7 @@
     transition: all 0.2s ease-in-out;
   }
   
- .navMenu a:nth-child(1) ~ .dot {
+ .navMenu a:nth-child(1):hover ~ .dot {
     -webkit-transform: translateX(40px);
     transform: translateX(40px);
     -webkit-transition: all 0.2s ease-in-out;
@@ -130,6 +130,4 @@
     opacity: 1;
   }
 
-.navMenu .jap{
-    color: #fddb3a;
-  }
+
