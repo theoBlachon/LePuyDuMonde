@@ -1,6 +1,6 @@
 <?php
 $bdd = new 
-PDO('mysql:host=localhost;port=3306;dbname=ki_monde','ki_monde', 'LePuyMonde');
+PDO('mysql:host=localhost;port=3306;dbname=lepuydumonde','root', '');
 $requete='SELECT * FROM admin';
 $resultats = $bdd->query($requete) ;
 $t=$resultats->fetch() ;
@@ -13,13 +13,13 @@ $resultats->closeCursor() ;
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta name="author" content="ETTER chris" />
-<meta name="description" content="Bienvenue sur le site de fallout construction !" />
-<meta name="keywords" content="fallout, constructions, ressources, calulateur" />
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Changement nom d'objets</title>
-<link rel="icon" type="image/x-icon" href="imagefallout/handypasswordG.ico" />
-<link rel="stylesheet" href="css/falloutornement.css" type="text/css" media="screen" title="ornement" />
+<link rel="icon" type="image/x-icon" href="" />
+<link rel="stylesheet" href="css/falloutornement.css" type="text/css" media="screen" title="" />
 <script src="scriptjs/Affichecachertxt.js" type="text/javascript"></script>
 </head>
 
@@ -40,16 +40,15 @@ $resultats->closeCursor() ;
 		if(isset($_POST["pseud"]) && isset($_POST["mdp"])){
 			$pseudo=$bdd->quote($_POST["pseud"]); 
 			$mdp=$bdd->quote($_POST["mdp"]); 
-			$requete='SELECT * FROM admin WHERE admin.nom_admin='.$pseudo.'AND admin.mdp_admin='.$mdp;
+			$requete='SELECT * FROM admin WHERE admin.pseudo_admin='.$pseudo.'AND admin.mdp_admin='.$mdp;
 			$resultats=$bdd->query($requete);
 			$t=$resultats->fetchAll();
 			$resultats->closeCursor();
 			$nbmaj=count($t);
-
 			if($nbmaj==1){
 				echo("connexion réussie !");
-				echo ("\n"."vous pouvez desormais partager une image avec le lien suivant :");
-				echo ("<a class='resulat' href='partagei.php'> partager une image </a>"."(site en construction, la page n'est pas encore disponible vous ne pourrez donc pas encore ajouter une image désolé.)");
+				echo ("\n"."vous pouvez acceder à la page admin");
+				echo ("<a href='ModifBaseD.php'> administration </a>");
 			}
 			else{
 				echo("erreur de connexion, veuillez recommencez");
@@ -58,7 +57,7 @@ $resultats->closeCursor() ;
 		?>
 	</section>
 
-	<footer class="element7bis">
+	<footer>
 	</footer>
 </body>
 </html>
