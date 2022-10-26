@@ -262,7 +262,8 @@ h1::after {
   }
 
   .item1 img{
-    width: 600px;
+    max-width: 600px;
+    height: auto;
   }
 
   .item2{
@@ -292,8 +293,6 @@ h1::after {
     margin-top: 200px;
     margin-left: 60px;
     margin-right: 50px;
-    background-color: #24262b;
-    color: white;
   }
 
   .container3{
@@ -318,6 +317,12 @@ h1::after {
   .container4 h1{
     color: white;
     margin-bottom: 80px;
+  }
+
+  .item4{
+    background-color: #24262b;
+    color: white;
+    padding: 25px;
   }
 
   .carte{
