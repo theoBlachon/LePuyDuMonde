@@ -18,12 +18,26 @@ $resultats->closeCursor() ;
 <meta name="keywords" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="" />
-<link rel="stylesheet" href="" type="text/css" media="screen" title="" />
+<link rel="stylesheet" href="modif.css" type="text/css" media="screen" title="" />
 </head>
 
 <body>
-	<header>
-	</header>
+<nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><img src="img/logo2.png" alt=""></div>
+          <!-- NAVIGATION MENUS -->
+          <div class="navMenu">
+            <a href="#">Japon</a>
+            <a href="#">Mexique</a>
+            <a href="#" >Inde</a>
+            <a href="#">Egypte</a>
+            <a href="#" >accès</a>
+            <a href="#" >réserver</a>
+            <a href="#"class="acc">administrateur</a>
+            <div class="dot"></div>
+        </div>
+    </nav>
+	<div class="liste">
 	<form method="POST" action="">
 		<h1> Les billets:</h1><br/>
 		<select name="id_billets">
@@ -38,7 +52,7 @@ $resultats->closeCursor() ;
 		} 
 		?>
 		</select><br/>
-		<input type="submit"  value="Supprimer">
+		<input class="submit" type="submit"  value="Supprimer">
 	</form>
 	<section>
 		<?php
@@ -53,7 +67,7 @@ $resultats->closeCursor() ;
 	</section>
 	<br/>
 	<form method="POST" action="">
-		<h1>Modifier le nom d'un client:</h1><br/>
+		<h1>Modifier le nom d'un client:</h1>
 		<select name="id_nom">
 		<?php
 			$billet='SELECT * FROM client';
@@ -65,9 +79,9 @@ $resultats->closeCursor() ;
 				echo "<option value=".$recup[$i]["id_client"].">"." client: ".$recup[$i]["nom_client"]."</option>";
 		} 
 		?>
-		<input type="name" step="any" name="nom_client"/><br/>
+		<input class="submit" type="name" step="any" name="nom_client"/><br/>
 		</select>
-		<input type="submit"  value="modifier">
+		<input class="submit" type="submit"  value="modifier">
 	</form>
 	<?php
 		if(isset($_POST["id_nom"])){
@@ -90,7 +104,7 @@ $resultats->closeCursor() ;
 		?>
 		<textarea type="textarea" step="any" name="Description"></textarea><br/>
 		</select>
-		<input type="submit"  value="Ajouter +">
+		<input class="submit" type="submit"  value="Ajouter +">
 	</form>
 	<?php
 		if(isset($_POST["Description"])){
@@ -114,7 +128,7 @@ $resultats->closeCursor() ;
 			<br/>
 			Mot de passe <input type="password" steps="any" name="mdp" id="mdp" required/>
 			<br/>
-			<input type="submit"  value="enregistrer"><br/>
+			<input class="submit" type="submit"  value="enregistrer"><br/>
 
 		<?php
 			$requete='SELECT nom_admin, prenom_admin, mailadmin, mdp_admin, pseudo_admin FROM admin';
@@ -159,6 +173,7 @@ $resultats->closeCursor() ;
 			}
 			?>
 			<h1> Liste des administrateurs</h1>
+			
 			<?php
 			class affadmin{
 				public $nom_admin = "";
@@ -184,10 +199,42 @@ $resultats->closeCursor() ;
 			}
 
 		?>
+		</div>
 
     </form>
-	<footer>
-	</footer>
 </body>
+
+<footer class="footer">
+ <div class="containerf">
+  <div class="row">
+    <div class="footer-col">
+      <h4>Pays</h4>
+      <ul>
+        <li><a href="#">Japon</a></li>
+        <li><a href="#">Mexique</a></li>
+        <li><a href="#">Inde</a></li>
+        <li><a href="#">Egypte</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Plan</h4>
+      <ul>
+        <li><a href="#">Carte</a></li>
+        <li><a href="#">Parkings</a></li>
+        <li><a href="#">Accès handicapé</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Association</h4>
+        <ul>
+          <li><a href="#">Compte administrateur</a></li>
+        </ul>
+      </div>
+    <div class="footer-col">
+      <img class="logofooter" src="img/logo300px.png" alt="">
+    </div>
+  </div>
+ </div>
+</footer>
 
 </html>
