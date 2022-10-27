@@ -22,19 +22,46 @@ $resultats2->closeCursor() ;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inscription</title>
 <link rel="icon" type="image/x-icon" href="" />
-<link rel="stylesheet" href="" type="text/css" media="screen" title="" />
+<link rel="stylesheet" href="reserver.css" type="text/css" media="screen" title="" />
 </head>
 
 <body>
-	<form method="POST" action="">
-		Nom: <input type="name" step="any" name="nom" id="nom" required/>
-		<br>
-		Prénom: <input type="name" step="any" name="prenom" id="prenom" required/>
-		<br/>
-		Email: <input type="text" step="any" name="email" id="email" required/>
-		<br>
-		Numero de telephone: <input type="number_format" step="any" name="numero" id="numero" maxlength=10 required/>
-		<br/>
+<nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><img src="img/logo2.png" alt=""></div>
+          <!-- NAVIGATION MENUS -->
+          <div class="navMenu">
+            <a href="#">Japon</a>
+            <a href="#">Mexique</a>
+            <a href="#" >Inde</a>
+            <a href="#">Egypte</a>
+            <a href="#" >accès</a>
+            <a href="#" class="acc">réserver</a>
+            <a href="#">administrateur</a>
+            <div class="dot"></div>
+        </div>
+    </nav>
+	<div class="conteneur">
+	<div class="container" >
+	<h1 class="text-center">Reserver</h1>
+	<form method="POST" class="registration-form" action="">
+		<label class="col-one-half">
+			<span class="label-text">Nom</span>
+			<input type="name" step="any" name="nom" id="nom" required/>
+		</label>
+		<label class="col-one-half">
+			<span class="label-text">Prénom</span>
+			<input type="name" step="any" name="prenom" id="prenom" required/>
+		</label>
+		<label>
+			<span class="label-text">Email</span>
+			<input type="text" step="any" name="email" id="email" required/>
+		</label>
+		<label>
+			<span class="label-text">Telephone</span>
+			<input type="number_format" step="any" name="numero" id="numero" maxlength=10 required/>
+		</label>
+		<div class="tarif">
 		Tarifs:
 			<select name="id_billets">
 					<?php
@@ -44,7 +71,10 @@ $resultats2->closeCursor() ;
 					} 
 					?>
 			</select><br/>
-		<input type="submit" value="valider" id="reserv">
+			</div>
+		<div class="text-center">
+			<input class="submit" type="submit" value="valider" id="reserv">
+		</div>
 	</form>		
 	<section>
 		<?php
@@ -79,8 +109,40 @@ $resultats2->closeCursor() ;
 			}
 			?>
 	</section>
-
-	<footer>	
-	</footer>
+	</div>
+	</div>
 </body>
+
+<footer class="footer">
+ <div class="containerf">
+  <div class="row">
+    <div class="footer-col">
+      <h4>Pays</h4>
+      <ul>
+        <li><a href="#">Japon</a></li>
+        <li><a href="#">Mexique</a></li>
+        <li><a href="#">Inde</a></li>
+        <li><a href="#">Egypte</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Plan</h4>
+      <ul>
+        <li><a href="#">Carte</a></li>
+        <li><a href="#">Parkings</a></li>
+        <li><a href="#">Accès handicapé</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Association</h4>
+        <ul>
+          <li><a href="#">Compte administrateur</a></li>
+        </ul>
+      </div>
+    <div class="footer-col">
+      <img class="logofooter" src="img/logo300px.png" alt="">
+    </div>
+  </div>
+ </div>
+</footer>
 </html>

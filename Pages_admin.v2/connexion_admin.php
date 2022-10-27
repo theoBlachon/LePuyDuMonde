@@ -19,21 +19,46 @@ $resultats->closeCursor() ;
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Changement nom d'objets</title>
 <link rel="icon" type="image/x-icon" href="" />
-<link rel="stylesheet" href="css/falloutornement.css" type="text/css" media="screen" title="" />
-<script src="scriptjs/Affichecachertxt.js" type="text/javascript"></script>
+<link rel="stylesheet" href="connexion.css" type="text/css" media="screen" title="" />
+<script src="Affichecachertxt.js" type="text/javascript"></script>
 </head>
 
 <body>
-	<header>
-	</header>
+<nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo"><img src="img/logo2.png" alt=""></div>
+          <!-- NAVIGATION MENUS -->
+          <div class="navMenu">
+            <a href="#">Japon</a>
+            <a href="#">Mexique</a>
+            <a href="#" >Inde</a>
+            <a href="#">Egypte</a>
+            <a href="#" >accès</a>
+            <a href="#" >réserver</a>
+            <a href="#"class="acc">administrateur</a>
+            <div class="dot"></div>
+        </div>
+    </nav>
+	<div class="conteneur">
+		<div class="container">
 	<form method="POST" action="">
-		pseudo: <input type="name" step="any" name="pseud"/>
-		<br>
-		mot de passe: <input type="password" id="password" step="any" name="mdp"/>
-		<img  id="imgpass" src="imagefallout/handypassword.png">
-		<br/>
-		<input type="submit" id="connexion" value="connexion">
-	</form>		
+		<label>
+		<span class="label-text">pseudo</span>
+		<input type="name" step="any" name="pseud"/>
+		</label>
+		<label class="password">
+			<span class="label-text">Mot de passe</span>
+			<div class="mdp">
+			<img id="imgpass" src="img/invisible.png">
+			<input type="password" id="password" step="any" name="mdp"/>
+			</div>
+			
+		</label>
+		
+		
+		<input class="submit" type="submit" id="connexion" value="connexion">
+	</form>
+	
 
 	<section>
 		<?php
@@ -56,8 +81,39 @@ $resultats->closeCursor() ;
 		}	
 		?>
 	</section>
-
-	<footer>
-	</footer>
+	</div>
+	</div>
 </body>
+<footer class="footer">
+ <div class="containerf">
+  <div class="row">
+    <div class="footer-col">
+      <h4>Pays</h4>
+      <ul>
+        <li><a href="#">Japon</a></li>
+        <li><a href="#">Mexique</a></li>
+        <li><a href="#">Inde</a></li>
+        <li><a href="#">Egypte</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Plan</h4>
+      <ul>
+        <li><a href="#">Carte</a></li>
+        <li><a href="#">Parkings</a></li>
+        <li><a href="#">Accès handicapé</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Association</h4>
+        <ul>
+          <li><a href="#">Compte administrateur</a></li>
+        </ul>
+      </div>
+    <div class="footer-col">
+      <img class="logofooter" src="img/logo300px.png" alt="">
+    </div>
+  </div>
+ </div>
+</footer>
 </html>
